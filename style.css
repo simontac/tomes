@@ -1,0 +1,187 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('fonts/Geist[wght].woff2') format('woff2');
+  font-weight: 100 900; /* variable fonts can define a range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('fonts/GeistMono[wght].woff2') format('woff2');
+  font-weight: 100 900; /* variable fonts can define a range */
+  font-style: normal;
+}
+
+:root {
+    --title-font: 'Geist', sans-serif;
+    --body-font: 'Geist Mono', sans-serif;
+    --accent-color: #ffde3b;
+    --title-font-size: 24pt;
+    --text-font-size: 12pt;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --title-font-size: 20pt;
+        --text-font-size: 10pt;
+    }
+}
+
+::selection {
+  background-color: var(--accent-color);
+}
+
+body {
+    user-select: none; 
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;  
+}
+
+.app-container {
+    width: 50%;
+    max-width: 600px;
+    background-color: #fefefe;
+    padding: 1rem;               
+    border-radius: 12px;         
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+    body {
+        align-items: baseline;
+        padding-top: 2em;
+    }
+    
+    .app-container {
+        background-color: none;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: 80%;
+    }
+}
+
+h1 {
+    display: flex;
+    font-family: var(--title-font);
+    font-size: var(--title-font-size);
+    align-items: center;
+    margin: 0;
+}
+
+h1 svg {
+    height: 1em;
+}
+
+h1 #title {
+    flex: 1;
+    margin-left: 0.15em;
+}
+
+.add-button {
+    height: 0.9em;
+    transition: transform 0.1s ease;
+}
+
+.add-button:active {
+  transform: scale(0.9);
+}
+
+p {
+    font-family: var(--body-font);
+    font-size: var(--text-font-size);
+    font-weight: 400;
+    margin: 0 0 1.5em 0;
+}
+
+/* ----- ADD BOOK POPUP FORM -----*/
+.add-book-popup-form {
+    display: flex;
+    gap: 0.2em;
+    margin-bottom: 1.2em;
+}
+
+.add-book-popup-form input {
+    width: 40%;
+}
+
+.add-book-popup-form button {
+    flex: 1;
+}
+
+/* ----- BOOK ENTRIES ----- */
+.book-entry {
+    font-family: var(--body-font);
+    font-size: var(--text-font-size);
+    font-weight: 400;
+    padding: 1em;               
+    border-radius: 12px;         
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 0.8em;
+}
+
+/* ----- BOOK ENTRY MAIN INFO ----- */
+.book-entry-main-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.1s ease;
+}
+
+.book-entry-main-info:active {
+    transform: scale(0.99);
+}
+
+.book-cover {
+    background-color: #e8e8e8;
+    height: 5em;
+    aspect-ratio: 2/3;
+    margin-right: 0.8em;
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-metadata {
+    flex: 1;
+}
+
+.book-title {
+    font-weight: bold;
+    line-height: 1.1em;
+    max-width: 80%;
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+}
+
+.book-rating svg {
+    height: 1.2em;
+}
+
+/* ----- BOOK ENTRY EXTRA INFO ----- */
+.book-entry-extra-info {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.book-status {
+    flex: 1;
+}
+
+/* ----- TO KEEP AT THE END -----*/
+.hidden {
+    display: none;
+}
+
+.rotated {
+    transform: rotate(45deg);
+}
