@@ -94,7 +94,7 @@ p {
     font-family: var(--body-font);
     font-size: var(--text-font-size);
     font-weight: 400;
-    margin: 0 0 1.5em 0;
+    margin-bottom: 0 0 1.5em 0;
 }
 
 /* ----- ADD BOOK POPUP FORM -----*/
@@ -110,6 +110,25 @@ p {
 
 .add-book-popup-form button {
     flex: 1;
+}
+
+/* ----- SORT ENTRIES ----- */
+.entries-sort {
+    font-family: var(--body-font);
+    font-size: var(--text-font-size);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.entries-sort svg {
+    height: 1.8em;
+    margin-left: 0.4em;
+}
+
+.toggled {
+    transform: rotate(180deg);
 }
 
 /* ----- BOOK ENTRIES ----- */
