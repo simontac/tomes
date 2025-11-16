@@ -1,0 +1,26 @@
+[
+  {
+    "title": "The Runaway Jury",
+    "author": "John Grisham",
+    "year": "1996",
+    "pages": 424,
+    "rating": 5,
+    "dateRead": "10.11.25"
+  },
+  {
+    "title": "The Widow",
+    "author": "John Grisham",
+    "year": "2023",
+    "pages": 320,
+    "rating": 4,
+    "dateRead": "12.11.25"
+  },
+  {
+    "title": "The Thursday Murder Club",
+    "author": "Richard Osman",
+    "year": "2020",
+    "pages": 320,
+    "rating": 4,
+    "dateRead": "12.11.25"
+  }
+]
