@@ -87,7 +87,7 @@ h1 #title {
 }
 
 .add-button:active {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 p {
@@ -124,11 +124,17 @@ p {
 
 .entries-sort svg {
     height: 1.8em;
-    margin-left: 0.4em;
+    margin-left: 0.2em;
 }
 
 .toggled {
     transform: rotate(180deg);
+    fill: black;
+}
+
+.inverted {
+    fill: white;
+    stroke: white;
 }
 
 /* ----- BOOK ENTRIES ----- */
@@ -147,11 +153,6 @@ p {
     display: flex;
     align-items: center;
     width: 100%;
-    transition: transform 0.1s ease;
-}
-
-.book-entry-main-info:active {
-    transform: scale(0.99);
 }
 
 .book-cover {
@@ -194,6 +195,15 @@ p {
 
 .book-status {
     flex: 1;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    font-family: var(--body-font);
+    font-size: var(--text-font-size);
+    font-weight: 400;
+    position: fixed;
+    bottom: 2em;
 }
 
 /* ----- TO KEEP AT THE END -----*/

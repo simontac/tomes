@@ -14,6 +14,7 @@ document.querySelectorAll('.app-container').forEach(i => {
 const toggleButton = document.querySelector('.entries-sort svg');
 toggleButton.addEventListener('click', () => {
   toggleButton.classList.toggle('toggled');
+  toggleButton.querySelector('circle').classList.toggle('inverted');
 });
 
 // Showing book entry extra info on click over main info area

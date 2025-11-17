@@ -3,7 +3,7 @@ async function loadColletion () {
         const response = await fetch("https://raw.githubusercontent.com/simontac/tomes/refs/heads/main/collection.json?timestamp=" + Date.now());
         const data = await response.json();
         
-        const appContainer = document.querySelector(".app-container");
+        const entriesList = document.querySelector(".entries-list");
 
         data.forEach(book => {
             const bookEntry = document.createElement("div");
@@ -40,8 +40,14 @@ async function loadColletion () {
                 </div>         
             `;
 
-            appContainer.appendChild(bookEntry);
+            entriesList.appendChild(bookEntry);
         });
+
+        // Use this to display number of books in collection
+        document.querySelector('.footer').innerHTML = `
+            ${data.length} books in your collection
+        `;
+        console.log(data.length);
     } 
     catch (error) {
         console.error(error);
