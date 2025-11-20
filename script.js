@@ -40,7 +40,9 @@ function renderList(retrievedBooksArray) {
 
       bookEntry.innerHTML = `
           <div class="book-entry-main-info">
-              <div class="book-cover"></div>
+              <div class="book-cover">
+                <img src="https://raw.githubusercontent.com/simontac/tomes/refs/heads/main/covers/${book.author}-${book.year}.jpg">
+              </div>
               <div class="book-metadata">
                 <div class="book-title">${book.title}</div>
                 <div class="book-author">${book.author}</div>
